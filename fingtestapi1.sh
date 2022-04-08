@@ -9,18 +9,31 @@ echo ""
 figlet -f slant "Netowork API\
 Calling Tool" | lolcat
 
-read -p "API to send curl request to (with key in the url): " api_url
-echo $api_url > api_url.txt
+read -p "API url with auth key: " api_url1
+echo "ENTERED API URL: $api_url1"
 
 read -p "Display api raw data? (y/n): " rawdata_ask
-if [ $rawdata_ask == "n" ] 
+if [ $rawdata_ask == "n" ]
 then
 	echo "Not displaying raw data"
 else
-	curl -s $api_url | jq "."
+	curl -s $api_url1 | jq "."
 fi
 
-read -p "Enter ARRAY HEADING to query: " array_header_0x1
+read -p "Value of i: " increment
+echo ""
+echo "NOW THE PROGRAM WILL LOOP. PRESS CNTL+C TO QUIT"
+echo ""
+
+while [ $increment -lt 100 ]
+do
+
+	read -p "Enter array values to query (with dot notation for jq[except for the first delimiter]): " array_header_0x1
+	curl -s $api_url1 | jq ".$array_header_0x1"
+
+	let "increment=increment+1"
+
+done
 
 
 
