@@ -6,7 +6,7 @@ read -p "Press [ENTER] to start program"
 
 echo ""
 
-figlet -f slant "Netowork API\
+figlet -f slant "Netowrk API\
  Calling Tool" | lolcat
 
 read -p "API url with auth key: " api_url1
