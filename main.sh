@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "PREREQUISITES: figlet, curl, jq, lolcat"
+echo "PREREQUISITES: figlet, curl, jq, lolcat, nmap, sudo, ncurses-utils"
 echo "PLEASE INSTALL THESE BINARIES WITH YOUR PACKAGE MANAGER"
 echo "NOTE: USE LOWER CASE FOR ALL INPUTS"
 
@@ -42,7 +42,17 @@ do
 		elif [[ $scan_type_0x1 == "arp" ]] ; then
 
 			echo "Commencing arp scan of subnet"
-			nmap -sn $ipsub_scanvar_0x1
+			nmap -sn -v ipsub_scanvar_0x1
+
+		elif [[ $scan_type_0x1 == "syn" ]] ; then
+
+			echo "Commencing syn scan of subnet"
+			nmap -sS -v $ipsub_scanvar_0x1
+
+		elif [[ $scan_type_0x1 == "os" ]] ; then
+
+			echo "Commencing os scan of subnet"
+			nmap -O -v $ipsub_scanvar_0x1		
 
 		fi
 	elif [[ $prompt_input == "fapi" ]] ; then
