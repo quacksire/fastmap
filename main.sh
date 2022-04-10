@@ -34,7 +34,7 @@ do
 			reap -p "Scan all TCP ports(y/n)>>> " scanyesnotcp
 
 			if [[ $scanyesnotcp == "y" ]] ; then
-				nmap -p0- -A -T4 -v $ipsub_scanvar_0x1 | lolcat
+				nmap -p0- -A -T4 -v $ipsub_scanvar_0x1 
 			else
 				echo "scan cancelled"
 			fi
@@ -42,17 +42,17 @@ do
 		elif [[ $scan_type_0x1 == "arp" ]] ; then
 
 			echo "Commencing arp scan of subnet"
-			nmap -sn -v $ipsub_scanvar_0x1 | lolcat
+			nmap -sn -v $ipsub_scanvar_0x1 
 
 		elif [[ $scan_type_0x1 == "syn" ]] ; then
 
 			echo "Commencing syn scan of subnet"
-			nmap -sS -v $ipsub_scanvar_0x1 | lolcat
+			nmap -sS -v $ipsub_scanvar_0x1 
 
 		elif [[ $scan_type_0x1 == "os" ]] ; then
 
 			echo "Commencing os scan of subnet"
-			nmap -O -v $ipsub_scanvar_0x1 | lolcat
+			nmap -O -v $ipsub_scanvar_0x1 
 
 		fi
 	elif [[ $prompt_input == "fapi" ]] ; then
