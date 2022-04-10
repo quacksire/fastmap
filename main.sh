@@ -24,7 +24,7 @@ do
 
 		echo "Exiting program"
 		break
-		
+
 	elif [[ $prompt_input == "netmap" ]] ; then
 
 		echo "Starting nmap module"
@@ -33,7 +33,7 @@ do
 
 		if [[ $scan_type_0x1 == "port(tcp)" ]] ; then
 
-			reap -p "Scan all TCP ports(y/n)>>> " scanyesnotcp
+			read -p "Scan all TCP ports(y/n)>>> " scanyesnotcp
 
 			if [[ $scanyesnotcp == "y" ]] ; then
 				nmap -p0- -A -T4 -v $ipsub_scanvar_0x1 
@@ -88,3 +88,4 @@ do
 done
 
 figlet -f slant "Goodbye!" | lolcat
+#sudo nmap -sT -P0 -p 80 www.google.com
