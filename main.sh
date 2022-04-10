@@ -21,8 +21,10 @@ do
 
 	read -p ">>> " prompt_input
 	if [[ $prompt_input == "exit" ]] ; then
+
 		echo "Exiting program"
 		break
+		
 	elif [[ $prompt_input == "netmap" ]] ; then
 
 		echo "Starting nmap module"
