@@ -19,7 +19,7 @@ echo ""
 while [ $increment -lt 100 ]
 do
 
-	read -p ">>>  " prompt_input
+	read -p ">>> " prompt_input
 	if [[ $prompt_input == "exit" ]] ; then
 		echo "Exiting program"
 		break
@@ -34,7 +34,7 @@ do
 			reap -p "Scan all TCP ports(y/n)>>> " scanyesnotcp
 
 			if [[ $scanyesnotcp == "y" ]] ; then
-				nmap -p0- -A -T4 -v $ipsub_scanvar_0x1
+				nmap -p0- -A -T4 -v $ipsub_scanvar_0x1 | lolcat
 			else
 				echo "scan cancelled"
 			fi
@@ -42,17 +42,17 @@ do
 		elif [[ $scan_type_0x1 == "arp" ]] ; then
 
 			echo "Commencing arp scan of subnet"
-			nmap -sn -v ipsub_scanvar_0x1
+			nmap -sn -v $ipsub_scanvar_0x1 | lolcat
 
 		elif [[ $scan_type_0x1 == "syn" ]] ; then
 
 			echo "Commencing syn scan of subnet"
-			nmap -sS -v $ipsub_scanvar_0x1
+			nmap -sS -v $ipsub_scanvar_0x1 | lolcat
 
 		elif [[ $scan_type_0x1 == "os" ]] ; then
 
 			echo "Commencing os scan of subnet"
-			nmap -O -v $ipsub_scanvar_0x1		
+			nmap -O -v $ipsub_scanvar_0x1 | lolcat
 
 		fi
 	elif [[ $prompt_input == "fapi" ]] ; then
@@ -85,15 +85,4 @@ do
 
 done
 
-#read -p "API url with auth key: " api_url1
-#echo "ENTERED API URL: $api_url1"
-
-#ead -p "Display api raw data? (y/n): " rawdata_ask
-#if [ $rawdata_ask == "n" ]
-#then
-#	echo "Not displaying raw data"
-#else
-#	curl -s $api_url1 | jq "."
-#fi
-
-
+figlet -f slant "Goodbye!" | lolcat
