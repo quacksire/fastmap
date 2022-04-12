@@ -40,7 +40,7 @@ do
 			else
 				echo "scan cancelled"
 			fi
-		if [[ $scan_type_0x1 == "lp" ]] ; then
+		elif [[ $scan_type_0x1 == "lp" ]] ; then
 
 			echo "Screen will remain blank for a bit"
 			echo "================================================================"
