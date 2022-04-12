@@ -1,0 +1,14 @@
+Discovered open port 80/tcp on 192.168.1.11
+Discovered open port 3389/tcp on 192.168.1.11
+Discovered open port 22/tcp on 192.168.1.11
+Discovered open port 111/tcp on 192.168.1.11
+Discovered open port 2000/tcp on 192.168.1.11
+Discovered open port 5038/tcp on 192.168.1.11
+Discovered open port 6000/tcp on 192.168.1.11
+22/tcp   open  ssh           syn-ack OpenSSH 7.4 (protocol 2.0)
+80/tcp   open  http          syn-ack Apache httpd 2.4.6 ((CentOS) mod_auth_gssapi/1.5.1 mod_wsgi/3.4 Python/2.7.5)
+111/tcp  open  rpcbind       syn-ack 2-4 (RPC #100000)
+2000/tcp open  cisco-sccp?   syn-ack
+3389/tcp open  ms-wbt-server syn-ack xrdp
+5038/tcp open  asterisk      syn-ack Asterisk Call Manager 2.10.5
+6000/tcp open  X11           syn-ack (access denied)

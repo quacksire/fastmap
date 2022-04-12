@@ -29,18 +29,28 @@ do
 
 		echo "Starting nmap module"
 		read -p "Enter host+/subnet to scan>>> " ipsub_scanvar_0x1
-		read -p "What type of scan do you want to do? (syn/port(tcp)/os/arp)>>> " scan_type_0x1
+		read -p "What type of scan do you want to do? (syn/port/os/arp/lp(list open ports))>>> " scan_type_0x1
 
-		if [[ $scan_type_0x1 == "port(tcp)" ]] ; then
+		if [[ $scan_type_0x1 == "port" ]] ; then
 
-			read -p "Scan all TCP ports(y/n)>>> " scanyesnotcp
+			read -p "Scan all ports(y/n)>>> " scanyesnotcp
 
 			if [[ $scanyesnotcp == "y" ]] ; then
 				nmap -p0- -A -T4 -vvv $ipsub_scanvar_0x1 
 			else
 				echo "scan cancelled"
 			fi
-		
+		if [[ $scan_type_0x1 == "lp" ]] ; then
+
+			echo "Screen will remain blank for a bit"
+			echo "================================================================"
+			nmap -p0- -A -T4 -vvv $ipsub_scanvar_0x1 | grep "open port" > open_ports.txt
+			cat open_ports.txt
+			echo "================================================================"
+			echo "Amount of open ports: "
+			echo | wc -l open_ports.txt
+			echo "================================================================"
+
 		elif [[ $scan_type_0x1 == "arp" ]] ; then
 
 			echo "Commencing arp scan of subnet"
