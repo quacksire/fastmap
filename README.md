@@ -63,4 +63,16 @@ If you do not wish to display the raw data enter `n` to the console and press en
 
 jq is a command line json data parser. You can find the syntax manual/documentation for it [here](https://stedolan.github.io/jq/manual/)
 
+`>>> netmap`: Opens netmap modue (extension of nmap tool)
+
+Follow the steps: enter the IP you wish to scan and press enter. Then you will get an option to select the type of scan you wish to perform. 
+There are multiple types of scans you can perform ranging from ARP scans to port scans.
+
+Example:
+
+![lpscan](/docs/lpscan.png)
+
+The `lp` scan lists all the open ports with a count so that you don't need to go through all the salad of text that nmap throws into the terminal. 
+Of course there is an option to do a normal port scan with triple verbosity as shown in the screenshot `port`. Simple type in the scan you wish to perform and the program will do the rest.
+
 
