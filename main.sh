@@ -99,13 +99,10 @@ do
 		echo "PRESS CNTL+C TO STOP THE PACKETS FROM BEING CAPTURED"
 		sleep 3
 		echo "Starting capture..."
-		x="sudo tcpdump -i $t"
-		eval "$x"
-		y=$(eval "$x")
-
+		tcpdump -w packets.pcap -i $t
 		echo "ALL PACKETS CAPTURED"
 		echo "================================================" | lolcat
-		echo $y
+		tcpdump -r packets.pcap
 		echo "================================================" | lolcat
 
 	elif [[ $prompt_input == "help" ]] ; then
