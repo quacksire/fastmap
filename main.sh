@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "PREREQUISITES: figlet, curl, jq, lolcat, nmap, sudo, ncurses-utils"
-echo "PLEASE INSTALL THESE BINARIES WITH YOUR PACKAGE MANAGER"
+echo "PREREQUISITES: figlet, curl, jq, lolcat, nmap, sudo"
+echo "PLEASE INSTALL THESE libraries WITH YOUR PACKAGE MANAGER"
 echo "NOTE: USE LOWER CASE FOR ALL INPUTS"
 
 read -p "Press [ENTER] to start program"
