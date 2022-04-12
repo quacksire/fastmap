@@ -94,12 +94,20 @@ do
 		tcpdump -D | lolcat
 		echo "================================================"
 
-		read -p "Enter interface name: " $if_packets_0x1
+		read -p "Enter interface name: " $t
 		sleep 3
 		echo "PRESS CNTL+C TO STOP THE PACKETS FROM BEING CAPTURED"
 		sleep 3
-		tcpdump -i $if_packets_0x1 
-	
+		echo "Starting capture..."
+		x="sudo tcpdump -i $t"
+		eval "$x"
+		y=$(eval "$x")
+
+		echo "ALL PACKETS CAPTURED"
+		echo "================================================" | lolcat
+		echo $y
+		echo "================================================" | lolcat
+
 	elif [[ $prompt_input == "help" ]] ; then
 
 		echo "========================================="
