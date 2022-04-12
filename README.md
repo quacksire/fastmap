@@ -1,0 +1,1 @@
+![FASTMAP](/docs/fastmap_icon.png)

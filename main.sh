@@ -8,8 +8,9 @@ read -p "Press [ENTER] to start program"
 
 echo ""
 
-figlet -f slant "Netowrk Auditing\
- & Pinging Tool" | lolcat
+figlet -f slant "FastMap" | lolcat
+
+echo ""
 
 read -p "Value of i: " increment
 echo ""
@@ -85,11 +86,13 @@ do
 		sudo ping -c $ping_seconds_0x1 $ping_host_0x1
 	elif [[ $prompt_input == "help" ]] ; then
 
+		echo "========================================="
 		echo "help: displays this help menu"
-		echo "netmap: opens network mapping module"
+		echo "netmap: opens network mapping module" | lolcat
 		echo "ping: opens ping module"
-		echo "fapi: opens fing api calling module"
+		echo "fapi: opens fing api calling module" | lolcat
 		echo "exit: exits program"
+		echo "========================================="
 
 	fi
 
@@ -98,4 +101,3 @@ do
 done
 
 figlet -f slant "Goodbye!" | lolcat
-#sudo nmap -sT -P0 -p 80 www.google.com
