@@ -42,3 +42,18 @@ This is what it should look like:
 ![i](/docs/i.png)
 
 This will cause the program to loop from 80-100 (20 times). This value can be changed according to your needs but DO NOT go above 100.
+Every time you return a commnand, the value of "i" will increment hence causing the application to terminate after the limit is reached.
+
+# All Commands and Usage
+
+`>>> help`: Displays help list
+
+`>>> ping`: Opens ping modue
+
+To use this module, follow the exmaple given below:
+
+![pingexample](/docs/pingexample.png)
+
+`>>> fapi`: Opens Fing API calling module
+
+
