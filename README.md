@@ -41,3 +41,4 @@ This is what it should look like:
 
 ![i](/docs/i.png)
 
+This will cause the program to loop from 80-100 (20 times). This value can be changed according to your needs but DO NOT go above 100.
