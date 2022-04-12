@@ -1,6 +1,6 @@
 <img src="/docs/fastmap_icon.png" align="middle" alt="fastmap" />
 
-Fastmap is an efficient networking tool for linux. It combines the power of nmap, fing's api and much more.
+Fastmap is an efficient networking tool for linux. It combines the power of nmap, fing's api, tcpdump and much more.
 
 # Installation
 
@@ -76,6 +76,6 @@ Example:
 The `lp` scan lists all the open ports with a count so that you don't need to go through all the salad of text that nmap throws into the terminal. 
 Of course there is an option to do a normal port scan with triple verbosity as shown in the screenshot `port`. Simple type in the scan you wish to perform and the program will do the rest.
 
-`>>> tpackets`: Opens tcp packet dapturing module
+`>>> tpackets`: Opens tcp packet capturing module
 
 To use this module, you will need to input the interface name that you want to capture packets on. After which the process will start. When you think you have captured enough packets, press cntl+c and they will be printed into the console. Alternatively you could press cntl+c and ignore the text in the console and open wireshark and read the packets manually from the `packets.pcap` file.
