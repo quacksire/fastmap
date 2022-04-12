@@ -81,16 +81,33 @@ do
 			curl -s $api_url1 | jq "."
 		fi
 	elif [[ $prompt_input == "ping" ]] ; then
+	
 		read -p "Enter host to ping>>> " ping_host_0x1
 		read -p "How many seconds to ping>>> " ping_seconds_0x1
 		sudo ping -c $ping_seconds_0x1 $ping_host_0x1
+	
+	elif [[ $prompt_input == "tpackets" ]] ; then
+
+		echo "Opening packet catching interface..." | lolcat
+		echo "================================================"
+		echo "AVAILABLE INTERFACES"
+		tcpdump -D | lolcat
+		echo "================================================"
+
+		read -p "Enter interface name: " $if_packets_0x1
+		sleep 3
+		echo "PRESS CNTL+C TO STOP THE PACKETS FROM BEING CAPTURED"
+		sleep 3
+		tcpdump -i $if_packets_0x1 
+	
 	elif [[ $prompt_input == "help" ]] ; then
 
 		echo "========================================="
 		echo "help: displays this help menu"
 		echo "netmap: opens network mapping module" | lolcat
+		echo "tpackets: captures packets on specified interface" | lolcat
 		echo "ping: opens ping module"
-		echo "fapi: opens fing api calling module" | lolcat
+		echo "fapi: opens fing api calling module" 
 		echo "exit: exits program"
 		echo "========================================="
 
