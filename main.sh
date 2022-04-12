@@ -93,16 +93,15 @@ do
 		echo "AVAILABLE INTERFACES"
 		tcpdump -D | lolcat
 		echo "================================================"
-
-		read -p "Enter interface name: " $t
 		sleep 3
 		echo "PRESS CNTL+C TO STOP THE PACKETS FROM BEING CAPTURED"
+		read -p "Interface name>>> " tt
 		sleep 3
 		echo "Starting capture..."
-		tcpdump -w packets.pcap -i $t
+		sudo tcpdump -w packets.pcap -i $tt
 		echo "ALL PACKETS CAPTURED"
 		echo "================================================" | lolcat
-		tcpdump -r packets.pcap
+		sudo tcpdump -r packets.pcap
 		echo "================================================" | lolcat
 
 	elif [[ $prompt_input == "help" ]] ; then

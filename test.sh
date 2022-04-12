@@ -1,2 +1,5 @@
-sudo tcpdump -w something.pcap -i eth0
-tcpdump -r something.pcap
+#!/bin/sh
+
+variable="eth0"
+sudo tcpdump -w packets.pcap -i $variable
+sudo tcpdump -r packets.pcap
