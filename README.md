@@ -23,13 +23,14 @@ jq
 lolcat
 nmap
 sudo
+tcpdump
 ```
 
 Install these with your prefered package manager for your linux distribution (apt, pacman, yum, dnf etc.).
 
 Example- for debian distributions, the installation would look like this: 
 ```
-sudo apt-get install figlet curl jq lolcat nmap sudo
+sudo apt-get install figlet curl jq lolcat nmap sudo tcpdump
 ```
 
 # Usage

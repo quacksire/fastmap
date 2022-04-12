@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "PREREQUISITES: figlet, curl, jq, lolcat, nmap, sudo"
+echo "PREREQUISITES: figlet, curl, jq, lolcat, nmap, sudo, tcpdump"
 echo "PLEASE INSTALL THESE libraries WITH YOUR PACKAGE MANAGER"
 echo "NOTE: USE LOWER CASE FOR ALL INPUTS"
 
