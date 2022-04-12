@@ -56,4 +56,11 @@ To use this module, follow the exmaple given below:
 
 `>>> fapi`: Opens Fing API calling module
 
+To use this module you must configure your Fing API on your computer or any device on the network. Enter the Fing API url with key after the `?` as shown on the Fing app's local API page. Simple enter the Fing API url and follow the steps.
+
+Next you will have an option to display all the raw `.json` data. ONLY enter `y` or `n` as the program does not have data verification in place at the moment.
+If you do not wish to display the raw data enter `n` to the console and press enter. This will give you an option to parse the json data with jq.
+
+jq is a command line json data parser. You can find the syntax manual/documentation for it [here](https://stedolan.github.io/jq/manual/)
+
 
