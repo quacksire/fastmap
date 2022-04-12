@@ -52,7 +52,7 @@ Every time you return a commnand, the value of "i" will increment hence causing 
 
 To use this module, follow the exmaple given below:
 
-![pingexample](/docs/pingexample.png)
+![pingexample](/docs/ping_example.png)
 
 `>>> fapi`: Opens Fing API calling module
 
