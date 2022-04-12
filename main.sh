@@ -36,7 +36,7 @@ do
 			read -p "Scan all TCP ports(y/n)>>> " scanyesnotcp
 
 			if [[ $scanyesnotcp == "y" ]] ; then
-				nmap -p0- -A -T4 -v $ipsub_scanvar_0x1 
+				nmap -p0- -A -T4 -vvv $ipsub_scanvar_0x1 
 			else
 				echo "scan cancelled"
 			fi
@@ -44,17 +44,17 @@ do
 		elif [[ $scan_type_0x1 == "arp" ]] ; then
 
 			echo "Commencing arp scan of subnet"
-			nmap -sn -v $ipsub_scanvar_0x1 
+			nmap -sn -vvv $ipsub_scanvar_0x1 
 
 		elif [[ $scan_type_0x1 == "syn" ]] ; then
 
 			echo "Commencing syn scan of subnet"
-			sudo nmap -sS -v $ipsub_scanvar_0x1 
+			sudo nmap -sS -vvv $ipsub_scanvar_0x1 
 
 		elif [[ $scan_type_0x1 == "os" ]] ; then
 
 			echo "Commencing os scan of subnet"
-			sudo nmap -O -v $ipsub_scanvar_0x1 
+			sudo nmap -O -vvv $ipsub_scanvar_0x1 
 
 		fi
 	elif [[ $prompt_input == "fapi" ]] ; then
