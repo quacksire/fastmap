@@ -75,4 +75,3 @@ Example:
 The `lp` scan lists all the open ports with a count so that you don't need to go through all the salad of text that nmap throws into the terminal. 
 Of course there is an option to do a normal port scan with triple verbosity as shown in the screenshot `port`. Simple type in the scan you wish to perform and the program will do the rest.
 
-
