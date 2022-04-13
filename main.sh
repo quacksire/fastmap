@@ -44,13 +44,13 @@ do
 		elif [[ $scan_type_0x1 == "lp" ]] ; then
 
 			echo "Screen will remain blank for a bit"
-			echo "================================================================"
+			echo "================================================================" | lolcat
 			nmap -p0- -A -T4 -vvv $ipsub_scanvar_0x1 | grep "open port" > open_ports.txt
 			cat open_ports.txt
-			echo "================================================================"
+			echo "================================================================" | lolcat
 			echo "Amount of open ports: "
 			echo | wc -l open_ports.txt
-			echo "================================================================"
+			echo "================================================================" | lolcat
 
 		elif [[ $scan_type_0x1 == "arp" ]] ; then
 
