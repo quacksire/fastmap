@@ -121,6 +121,13 @@ do
 		nslookup $nsl_0x1
 		echo "================================================" | lolcat
 	
+	elif [[ $prompt_input == "ss" ]] ; then
+
+		echo "================================================" | lolcat
+		echo "Showing main ss runners"
+		ss -t -a 
+		echo "================================================" | lolcat
+	
 	elif [[ $prompt_input == "help" ]] ; then
 
 		echo "========================================="
@@ -130,6 +137,7 @@ do
 		echo "ping: opens ping module"
 		echo "trace: traces packets to specified host" | lolcat
 		echo "nsl: lookup nameservers"
+		echo "ss: shows ss runners" | lolcat
 		echo "fapi: opens fing api calling module" 
 		echo "exit: exits program"
 		echo "========================================="
