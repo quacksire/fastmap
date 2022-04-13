@@ -129,11 +129,20 @@ do
 		echo "================================================" | lolcat
 	
 	elif [[ $prompt_input == "gtrace" ]] ; then
+
 		echo "================================================" | lolcat
 		read -p "Trace and ping to host>>> " mtr_0x1
 		echo "STARTING MTR GUI"
 		mtr $mtr_0x1
 		echo "EXITING MTR"
+		echo "================================================" | lolcat
+	
+	elif [[ $prompt_input == "lhost" ]] ; then
+
+		echo "================================================" | lolcat
+		read -p "Host to lookup>>> " host_0x1
+		echo "Looking up host"
+		host $host_0x1
 		echo "================================================" | lolcat
 	
 	elif [[ $prompt_input == "help" ]] ; then
@@ -146,6 +155,7 @@ do
 		echo "trace: traces packets to specified host"
 		echo "gtrace: traces packets to specified host in GUI" | lolcat
 		echo "nsl: lookup nameservers"
+		echo "lhost: lookup hosts"
 		echo "ss: shows ss runners" | lolcat
 		echo "fapi: opens fing api calling module" 
 		echo "exit: exits program"
