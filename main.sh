@@ -161,6 +161,10 @@ do
 		echo "exit: exits program"
 		echo "========================================="
 	
+	else 
+		
+		$prompt_input
+	
 	fi
 
 	let "increment=increment+1"
