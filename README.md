@@ -83,6 +83,7 @@ To use this module, you will need to input the interface name that you want to c
 `>>> trace`: Traces the route of packets to a specified host (default 30 hops).
 
 `>>> nsl`: Lookups nameservers of specified host.
+![nslpic](/docs/nsl.png)
 
 `>>> ss`: Shows all running ss process on LO and Network
 
@@ -90,3 +91,4 @@ To use this module, you will need to input the interface name that you want to c
 
 `>>> lhost`: Looks up host just like the nsl command but better :)
 ![LHOSTLOOKUP](/docs/lhost.png)
+
