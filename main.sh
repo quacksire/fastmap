@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "PREREQUISITES: figlet, curl, jq, lolcat, nmap, sudo, tcpdump"
+echo "PREREQUISITES: figlet, curl, jq, lolcat, nmap, sudo, tcpdump, traceroute"
 echo "PLEASE INSTALL THESE libraries WITH YOUR PACKAGE MANAGER"
 echo "NOTE: USE LOWER CASE FOR ALL INPUTS"
 
@@ -104,6 +104,16 @@ do
 		sudo tcpdump -r packets.pcap
 		echo "================================================" | lolcat
 
+	elif [[ $prompt_input == "trace" ]] ; then
+
+		echo "================================================" | lolcat
+		echo "Packet tracing module"
+		read -p "Enter host to trace packets to>>> " trace_0x1
+		read -p "ipv4 or ipv6(4/6)>>> " trace_type_0x1
+		traceroute -$trace_type_0x1 $trace_0x1
+		echo "================================================" | lolcat
+
+	
 	elif [[ $prompt_input == "help" ]] ; then
 
 		echo "========================================="
@@ -111,6 +121,7 @@ do
 		echo "netmap: opens network mapping module" | lolcat
 		echo "tpackets: captures packets on specified interface" | lolcat
 		echo "ping: opens ping module"
+		echo "trace: traces packets to specified host" | lolcat
 		echo "fapi: opens fing api calling module" 
 		echo "exit: exits program"
 		echo "========================================="
@@ -120,5 +131,7 @@ do
 	let "increment=increment+1"
 
 done
+
+
 
 figlet -f slant "Goodbye!" | lolcat
