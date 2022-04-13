@@ -113,6 +113,13 @@ do
 		traceroute -$trace_type_0x1 $trace_0x1
 		echo "================================================" | lolcat
 
+	elif [[ $prompt_input == "nsl" ]] ; then
+
+		echo "================================================" | lolcat
+		echo "Nameserver lookup module"
+		read -p "Enter IP or domain to lookup>>> " nsl_0x1
+		nslookup $nsl_0x1
+		echo "================================================" | lolcat
 	
 	elif [[ $prompt_input == "help" ]] ; then
 
@@ -122,6 +129,7 @@ do
 		echo "tpackets: captures packets on specified interface" | lolcat
 		echo "ping: opens ping module"
 		echo "trace: traces packets to specified host" | lolcat
+		echo "nsl: lookup nameservers"
 		echo "fapi: opens fing api calling module" 
 		echo "exit: exits program"
 		echo "========================================="
