@@ -157,6 +157,4 @@ do
 
 done
 
-
-
 figlet -f slant "Goodbye!" | lolcat
