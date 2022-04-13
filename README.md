@@ -79,3 +79,10 @@ Of course there is an option to do a normal port scan with triple verbosity as s
 `>>> tpackets`: Opens tcp packet capturing module
 
 To use this module, you will need to input the interface name that you want to capture packets on. After which the process will start. When you think you have captured enough packets, press cntl+c and they will be printed into the console. Alternatively you could press cntl+c and ignore the text in the console and open wireshark and read the packets manually from the `packets.pcap` file.
+
+`>>> trace`: Traces the route of packets to a specified host (default 30 hops).
+
+`>>> nsl`: Lookups nameservers of specified host.
+
+`>>> ss`: Shows 
+
