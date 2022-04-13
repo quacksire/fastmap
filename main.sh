@@ -160,7 +160,7 @@ do
 		echo "fapi: opens fing api calling module" 
 		echo "exit: exits program"
 		echo "========================================="
-
+	
 	fi
 
 	let "increment=increment+1"
