@@ -128,6 +128,14 @@ do
 		ss -t -a 
 		echo "================================================" | lolcat
 	
+	elif [[ $prompt_input == "gtrace" ]] ; then
+		echo "================================================" | lolcat
+		read -p "Trace and ping to host>>> " mtr_0x1
+		echo "STARTING MTR GUI"
+		mtr $mtr_0x1
+		echo "EXITING MTR"
+		echo "================================================" | lolcat
+	
 	elif [[ $prompt_input == "help" ]] ; then
 
 		echo "========================================="
@@ -135,7 +143,8 @@ do
 		echo "netmap: opens network mapping module" | lolcat
 		echo "tpackets: captures packets on specified interface" | lolcat
 		echo "ping: opens ping module"
-		echo "trace: traces packets to specified host" | lolcat
+		echo "trace: traces packets to specified host"
+		echo "gtrace: traces packets to specified host in GUI" | lolcat
 		echo "nsl: lookup nameservers"
 		echo "ss: shows ss runners" | lolcat
 		echo "fapi: opens fing api calling module" 
