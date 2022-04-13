@@ -84,5 +84,8 @@ To use this module, you will need to input the interface name that you want to c
 
 `>>> nsl`: Lookups nameservers of specified host.
 
-`>>> ss`: Shows 
+`>>> ss`: Shows all running ss process on LO and Network
 
+`>>> gtrace`: Traces the route of packets to a specified host on a GUI (Graphcial User Interface). 
+
+`>>> lhost`: Looks up host just like the nsl command but better :)
