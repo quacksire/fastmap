@@ -35,7 +35,7 @@ Install these with your prefered package manager for your linux distribution (ap
 
 Example- for debian distributions, the installation would look like this: 
 ```
-sudo apt-get install figlet curl jq lolcat nmap sudo tcpdump
+sudo apt-get install figlet curl jq lolcat nmap sudo tcpdump traceroute host mtr
 ```
 
 # Usage
