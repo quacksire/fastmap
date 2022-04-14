@@ -34,8 +34,9 @@ mtr
 Install these with your prefered package manager for your linux distribution (apt, pacman, yum, dnf etc.).
 
 Example- for debian distributions, the installation would look like this: 
+
 ```
-sudo apt-get install figlet curl jq lolcat nmap sudo tcpdump traceroute host mtr
+xargs sudo apt-get install < requirements.txt
 ```
 
 # Usage

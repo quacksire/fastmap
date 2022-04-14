@@ -1,0 +1,10 @@
+figlet
+curl
+jq
+lolcat
+nmap
+sudo
+tcpdump
+traceroute
+host
+mtr
