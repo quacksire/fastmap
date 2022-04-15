@@ -145,6 +145,15 @@ do
 		host $host_0x1
 		echo "================================================" | lolcat
 	
+	elif [[ $prompt_input == "gp" ]] ; then
+
+		echo "================================================" | lolcat
+		read -p "Hosts to ping>>> " gping_0x1
+		echo "Starting graphical pinging interface"
+		sleep 3
+		gping $gping_0x1
+		echo "================================================" | lolcat
+
 	elif [[ $prompt_input == "help" ]] ; then
 
 		echo "========================================="
@@ -152,6 +161,7 @@ do
 		echo "netmap: opens network mapping module" | lolcat
 		echo "tpackets: captures packets on specified interface" | lolcat
 		echo "ping: opens ping module"
+		echo "gp: opens graphical pinging module" | lolcat
 		echo "trace: traces packets to specified host"
 		echo "gtrace: traces packets to specified host in GUI" | lolcat
 		echo "nsl: lookup nameservers"
