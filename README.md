@@ -12,6 +12,18 @@ cd fastmap
 chmod +x main.sh
 ```
 
+TO INSTALL THE `GP` (GRPAHICAL PINGING MODULE) YOU WILL HAVE TO DO IT MANUALLY.
+
+Either go to the site of gping and install it by following the steps [gping site](https://github.com/orf/gping)
+
+Or for debian follow these instructions.
+
+```bash
+chmod +x gping_install.sh
+
+./gping_install.sh
+```
+
 # Prerequisites
 
 You must have these libraries installed.
@@ -60,6 +72,11 @@ Every time you return a commnand, the value of "i" will increment hence causing 
 To use this module, follow the exmaple given below:
 
 ![pingexample](/docs/ping_example.png)
+
+`>>> gp`: Pings specified host(s) in graphical cli format.
+
+![gping_command](/docs/gping_0x1.png)
+![gping_graph](/docs/gping_0x2.png)
 
 `>>> fapi`: Opens Fing API calling module
 
