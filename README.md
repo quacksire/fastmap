@@ -121,3 +121,4 @@ To use this module, you will need to input the interface name that you want to c
 `>>> lhost`: Looks up host just like the nsl command but better :)
 ![LHOSTLOOKUP](/docs/lhost.png)
 
+`>>> pymap`: Performs ARP scan on the specified network. This module uses python3 and the prerequisites will have to be install manually.
