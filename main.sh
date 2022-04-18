@@ -154,6 +154,15 @@ do
 		gping $gping_0x1
 		echo "================================================" | lolcat
 
+	elif [[ $prompt_input == "pymap" ]] ; then
+
+		echo "================================================" | lolcat
+		read -p "Enter gateway to scan for>>> " pymap_0x1
+
+		sudo python3 pymap.py -t $pymap_0x1
+
+		echo "================================================" | lolcat
+	
 	elif [[ $prompt_input == "help" ]] ; then
 
 		echo "========================================="
@@ -166,7 +175,8 @@ do
 		echo "gtrace: traces packets to specified host in GUI" | lolcat
 		echo "nsl: lookup nameservers"
 		echo "lhost: lookup hosts"
-		echo "ss: shows ss runners" | lolcat
+		echo "pymap: runs python network mapping module" | lolcat
+		echo "ss: shows ss runners" 
 		echo "fapi: opens fing api calling module" 
 		echo "exit: exits program"
 		echo "========================================="

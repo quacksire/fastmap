@@ -51,6 +51,12 @@ Example- for debian distributions, the installation would look like this:
 xargs sudo apt-get install < requirements.txt
 ```
 
+Also a python pip3 installation is required for the `pymap` and `argparse` module.
+
+```
+python3 -m pip install -r req.txt
+```
+
 # Usage
 
 This command line application is very versatile and can run `x` amount of times depending on your requirements.
