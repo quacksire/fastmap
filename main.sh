@@ -15,8 +15,8 @@ for pkg in ${packages[@]}; do
 
     if [ "${is_pkg_installed}" == "install ok installed" ]; then
         echo ${pkg} is installed.
-	else
-		apt-get install -y $pkg
+    else
+	apt-get install -y $pkg
     fi
 done
 
