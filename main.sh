@@ -39,20 +39,20 @@ do
 			read -p "Scan all ports(y/n)>>> " scanyesnotcp
 
 			if [[ $scanyesnotcp == "y" ]] ; then
-				nmap -p0- -A -T4 -vvv $ipsub_scanvar_0x1 
+				sudo nmap -p0- -A -T4 -vvv $ipsub_scanvar_0x1 
 			else
 				echo "scan cancelled"
 			fi
 		elif [[ $scan_type_0x1 == "lp" ]] ; then
 
 			echo "Screen will remain blank for a bit"
-			echo $divider
-			nmap -p0- -A -T4 -vvv $ipsub_scanvar_0x1 | grep "open port" > open_ports.txt
+			echo "================================================================" | lolcat
+			sudo nmap -p0- -A -T4 -vvv $ipsub_scanvar_0x1 | grep "open port" > open_ports.txt
 			cat open_ports.txt
-			echo $divider
+			echo "================================================================" | lolcat
 			echo "Amount of open ports: "
 			echo | wc -l open_ports.txt
-			echo $divider
+			echo "================================================================" | lolcat
 
 		elif [[ $scan_type_0x1 == "arp" ]] ; then
 
@@ -91,10 +91,10 @@ do
 	elif [[ $prompt_input == "tpackets" ]] ; then
 
 		echo "Opening packet catching interface..." | lolcat
-		echo $divider
+		echo "================================================================" | lolcat
 		echo "AVAILABLE INTERFACES"
 		tcpdump -D | lolcat
-		echo $divider
+		echo "================================================================" | lolcat
 		sleep 3
 		echo "PRESS CNTL+C TO STOP THE PACKETS FROM BEING CAPTURED"
 		read -p "Interface name>>> " tt
@@ -102,42 +102,42 @@ do
 		echo "Starting capture..."
 		sudo tcpdump -w packets.pcap -i $tt
 		echo "ALL PACKETS CAPTURED"
-		echo $divider
+		echo "================================================================" | lolcat
 		sudo tcpdump -r packets.pcap
-		echo $divider
+		echo "================================================================" | lolcat
 
 	elif [[ $prompt_input == "trace" ]] ; then
 
-		echo $divider
+		echo "================================================================" | lolcat
 		echo "Packet tracing module"
 		read -p "Enter host to trace packets to>>> " trace_0x1
 		read -p "ipv4 or ipv6(4/6)>>> " trace_type_0x1
 		traceroute -$trace_type_0x1 $trace_0x1
-		echo $divider
+		echo "================================================================" | lolcat
 
 	elif [[ $prompt_input == "nsl" ]] ; then
 
-		echo $divider
+		echo "================================================================" | lolcat
 		echo "Nameserver lookup module"
 		read -p "Enter IP or domain to lookup>>> " nsl_0x1
 		nslookup $nsl_0x1
-		echo $divider
+		echo "================================================================" | lolcat
 	
 	elif [[ $prompt_input == "ss" ]] ; then
 
-		echo $divider
+		echo "================================================================" | lolcat
 		echo "Showing main ss runners"
 		ss -t -a 
-		echo $divider
+		echo "================================================================" | lolcat
 	
 	elif [[ $prompt_input == "gtrace" ]] ; then
 
-		echo $divider
+		echo "================================================================" | lolcat
 		read -p "Trace and ping to host>>> " mtr_0x1
 		echo "STARTING MTR GUI"
 		mtr $mtr_0x1
 		echo "EXITING MTR"
-		echo $divider
+		echo "================================================================" | lolcat
 	
 	elif [[ $prompt_input == "lhost" ]] ; then
 
@@ -145,29 +145,29 @@ do
 		read -p "Host to lookup>>> " host_0x1
 		echo "Looking up host"
 		host $host_0x1
-		echo $divider
+		echo "================================================================" | lolcat
 	
 	elif [[ $prompt_input == "gp" ]] ; then
 
-		echo $divider
+		echo "================================================================" | lolcat
 		read -p "Hosts to ping>>> " gping_0x1
 		echo "Starting graphical pinging interface"
 		sleep 3
 		gping $gping_0x1
-		echo $divider
+		echo "================================================================" | lolcat
 
 	elif [[ $prompt_input == "pymap" ]] ; then
 
-		echo $divider
+		echo "================================================================" | lolcat
 		read -p "Enter gateway to scan for>>> " pymap_0x1
 
 		sudo python3 pymap.py -t $pymap_0x1
 
-		echo $divider
+		echo "================================================================" | lolcat
 	
 	elif [[ $prompt_input == "help" ]] ; then
 
-		echo $divider
+		echo "================================================================" | lolcat
 		echo "help: displays this help menu"
 		echo "netmap: opens network mapping module" | lolcat
 		echo "tpackets: captures packets on specified interface" | lolcat
@@ -181,7 +181,7 @@ do
 		echo "ss: shows ss runners" 
 		echo "fapi: opens fing api calling module" 
 		echo "exit: exits program"
-		echo $divider
+		echo "================================================================" | lolcat
 	
 	else 
 		
