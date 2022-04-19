@@ -141,7 +141,7 @@ do
 	
 	elif [[ $prompt_input == "lhost" ]] ; then
 
-		echo$divider
+		echo "================================================================" | lolcat
 		read -p "Host to lookup>>> " host_0x1
 		echo "Looking up host"
 		host $host_0x1
