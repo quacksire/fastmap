@@ -57,7 +57,7 @@ do
 		elif [[ $scan_type_0x1 == "arp" ]] ; then
 
 			echo "Commencing arp scan of subnet"
-			nmap -sn -vvv $ipsub_scanvar_0x1 
+			sudo nmap -sn -vvv $ipsub_scanvar_0x1 
 
 		elif [[ $scan_type_0x1 == "syn" ]] ; then
 
